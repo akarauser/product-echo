@@ -1,0 +1,13 @@
+{
+    "data_path": "folder\file.csv",
+    "output_dir": "folder",
+    "base_model": "google-bert/bert-base-uncased",
+    "max_length": 400,
+    "max_new_tokens": 256,
+    "repetition_penalty": 1.15,
+    "target_modules":[
+        "Wqkv",
+        "fc1",
+        "fc2"
+    ]
+}

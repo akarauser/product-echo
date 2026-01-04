@@ -1,0 +1,35 @@
+[project]
+name = "product-echo"
+version = "0.1.0"
+description = "Generating Product Description"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.12.4",
+    "accelerate>=1.11.0", 
+    "torch>=2.9.0", 
+    "peft>=0.17.1", 
+    "datasets>=4.4.1", 
+    "pandas>=2.3.3", 
+    "transformers>=4.57.1"
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9.0.1",]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # Pyflakes
+    "I", # isort
+    "UP", # pyupgrade
+]
+
+ignore = [
+    "E501", # line-too-long
+]
